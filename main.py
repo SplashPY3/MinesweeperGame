@@ -1,6 +1,6 @@
-a = float(input("Enter a number  "))
-b = float(input("Enter a number  "))
-o = input("Enter an operation  ")
+a = float(input("Enter a number\t"))
+b = float(input("Enter a number\t"))
+o = input("Enter an operation\t")
 
 if o == "+":
     print(a + b)
