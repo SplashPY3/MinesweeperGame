@@ -1,33 +1,18 @@
-a = float(input("Enter a number\t"))
-b = float(input("Enter a number\t"))
-o = input("Enter an operation\t")
+import time
+import turtle
 
-if o == "+":
-    print(a + b)
+process = 0
 
-elif o == "-":   # decreasing b by a
-    print(a - b)
+while process < 100:
+    print("Hacking NASA...", process, "% done:")
+    process += 10
+    time.sleep(2.5)
 
-elif o == "/":
-    if a or b == 0:
-        print("Error: Division by 0")
-    else:
-        print(a / b)
-
-elif o == "*":
-    print(a * b)
-
-elif o == "mod":
-    print(a % b)
-
-elif o == "pow":
-    print(a ** b)
-
-elif o == "div":
-    if a or b == 0:
-        print("Error: Division by 0")
-    else:
-        print(a // b)
-
-else:
-    print("Error: Unsupported operation")
+if process >= 100:
+    print("NASA Hacked Successfully:")
+    turtle.bgcolor("black")
+    turtle.color("dark green")
+    style = ("Papyrus", 70, "underline")
+    turtle.write("NASA Hacked Successfully!", font=style, align="center")
+    turtle.hideturtle()
+    time.sleep(10)
