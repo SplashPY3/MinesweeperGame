@@ -1,18 +1,84 @@
+from random import randint  # призываю рандом для дальнейших целей
 import time
 import turtle
 
-process = 0
-
-while process < 100:
-    print("Hacking NASA...", process, "% done:")
-    process += 10
-    time.sleep(2.5)
-
-if process >= 100:
-    print("NASA Hacked Successfully:")
+username = input("Enter your username: ")  # здесь запрашиваю имя пользователя
+if username == "splash" or username == "Splash":  # если юзернэйм равен Splash выйдет сообщение приведенное снизу
+    turtle.clear()
+    print("Welcome to SAPPER, my Lord! Love to see you here")
     turtle.bgcolor("black")
-    turtle.color("dark green")
-    style = ("Papyrus", 70, "underline")
-    turtle.write("NASA Hacked Successfully!", font=style, align="center")
+    turtle.color("white")
+    style = ("Hellovetica", 55, "underline")
+    turtle.write("Welcome to SAPPER, my Lord! Love to see you here", font=style, align="center")
     turtle.hideturtle()
-    time.sleep(10)
+    time.sleep(0.5)
+else:
+    turtle.clear()
+    print(username, ",", "Welcome to SAPPER on Python 3")  # тут юзернэйм не равен Splash
+    turtle.bgcolor("black")
+    turtle.color("white")
+    style = ("Hellovetica", 55, "underline")
+    turtle.write("Welcome to SAPPER on Python 3", font=style, align="center")
+    turtle.hideturtle()
+    time.sleep(1.5)
+score = 0  # переменная для зачисления очков
+
+info = {  # эта переменная в которую записал dictionary с доп инфой
+  "Splash": {"Full name": "Max Splash Hacicheant", "age": "12", "e-mail": "wanshotofficial@gmail.com"}
+}
+
+alive = True  # переменная для цикла while и в дальнейшем удобный tool
+while alive:
+    square = input(" Enter a number of a square: ")  # запрашиваю число у юзера
+    num_square = int(square)  # превращаю square в тип int
+    square = num_square
+    bomb_square = randint(1, 8)  # рандомное число из-за которого игра завершится
+    if square > 8 or square < 1:      # если юзер будет читерить вводя числа > 8
+        username = "Cheater"  # его никнейм измениться на приведенный в этой строке
+        print("Not this time,", username)  # и выйдет это сообщение
+        alive = False  # здесь игра завершится
+    elif square == bomb_square:  # тут Game Over Script
+        alive = False
+        print("You are dead...  Your score is", score)  # здесь выводит набранное кол-во очков
+        turtle.clear()
+        turtle.bgcolor("black")
+        turtle.color("white")
+        style = ("Hellovetica", 55, "underline")
+        turtle.write("You are dead...", font=style, align="center")
+        turtle.clear()
+        style = ("Hellovetica", 43, "underline")
+        turtle.write("For some more information type 'info', if you want to leave type 'quit':", font=style, align="center")
+        turtle.hideturtle()
+        time.sleep(0.5)
+        user_prompt = input("If you want to see some more information type 'info' or if you want to leave type quit in chat: ")
+        if user_prompt == "info":
+            turtle.clear()
+            print(list(info.items()))  # вывожу и листую доп инфу       # спрашиваю если юзер хочет доп инфу или уйти ^
+        elif user_prompt == "quit":  # закрываю прогу
+            turtle.clear()
+            print("Closing program...")
+            turtle.bgcolor("black")
+            turtle.color("white")
+            style = ("Hellovetica", 55, "underline")
+            turtle.write("Closing program...", font=style, align="center")
+            turtle.hideturtle()
+            time.sleep(0.5)
+        else:
+            turtle.clear()
+            print("Unknown command been received: Closing program...")  # вывожу это если не info и не quit
+            turtle.bgcolor("black")
+            turtle.color("white")
+            style = ("Hellovetica", 55, "underline")
+            turtle.write("Unknown command been received: Closing program...", font=style, align="center")
+            turtle.hideturtle()
+            time.sleep(0.5)
+    else:
+        turtle.clear()
+        print("No bomb here")  # вывожу это если не попался
+        turtle.bgcolor("black")
+        turtle.color("white")
+        style = ("Hellovetica", 55, "underline")
+        turtle.write("No bomb here", font=style, align="center")
+        turtle.hideturtle()
+        time.sleep(0.5)
+        score += 1  # начисляю пойнты
