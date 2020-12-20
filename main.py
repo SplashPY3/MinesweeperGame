@@ -8,28 +8,28 @@ if username == "splash" or username == "Splash":  # если юзернэйм р
     print("Welcome to SAPPER, my Lord! Love to see you here")
     turtle.bgcolor("black")
     turtle.color("white")
-    style = ("Hellovetica", 55, "underline")
-    turtle.write("Welcome to SAPPER, my Lord! Love to see you here", font=style, align="center")
+    style = ("FunGames", 25, "underline")
+    turtle.write("Welcome to Defuser, mr. Splash! Love to see you here!", font=style, align="center")
     turtle.hideturtle()
     time.sleep(0.5)
 else:
     turtle.clear()
-    print(username, ",", "Welcome to SAPPER on Python 3")  # тут юзернэйм не равен Splash
+    print(username, ",", "Welcome to DEFUSER on Python 3")  # тут юзернэйм не равен Splash
     turtle.bgcolor("black")
     turtle.color("white")
-    style = ("Hellovetica", 55, "underline")
-    turtle.write("Welcome to SAPPER on Python 3", font=style, align="center")
+    style = ("FunGames", 25, "underline")
+    turtle.write("Welcome to DEFUSER on Python 3", font=style, align="center")
     turtle.hideturtle()
     time.sleep(1.5)
 score = 0  # переменная для зачисления очков
 
 info = {  # эта переменная в которую записал dictionary с доп инфой
-  "Splash": {"Full name": "Max Splash Hacicheant", "age": "12", "e-mail": "wanshotofficial@gmail.com"}
+  "Splash": {"Full name": "Max Splash Hacicheant", "age": "13", "e-mail": "max.hacicheant@gmail.com"}
 }
 
 alive = True  # переменная для цикла while и в дальнейшем удобный tool
 while alive:
-    square = input(" Enter a number of a square: ")  # запрашиваю число у юзера
+    square = input(" Enter a number of a square from 1 to 8: ")  # запрашиваю число у юзера
     num_square = int(square)  # превращаю square в тип int
     square = num_square
     bomb_square = randint(1, 8)  # рандомное число из-за которого игра завершится
@@ -45,8 +45,9 @@ while alive:
         turtle.color("white")
         style = ("Hellovetica", 55, "underline")
         turtle.write("You are dead...", font=style, align="center")
+        time.sleep(3)
         turtle.clear()
-        style = ("Hellovetica", 43, "underline")
+        style = ("Hellovetica", 25, "underline")
         turtle.write("For some more information type 'info', if you want to leave type 'quit':", font=style, align="center")
         turtle.hideturtle()
         time.sleep(0.5)
