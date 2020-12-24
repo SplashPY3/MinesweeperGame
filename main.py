@@ -37,6 +37,13 @@ while alive:
         username = "Cheater"  # его никнейм измениться на приведенный в этой строке
         print("Not this time,", username)  # и выйдет это сообщение
         alive = False  # здесь игра завершится
+        turtle.clear()
+        turtle.bgcolor("black")
+        turtle.color("white")
+        style = ("FunGames", 45, "underline")
+        turtle.write("Not this time, Cheater!", font=style, align="center")
+        time.sleep(1.5)
+        turtle.hideturtle()
     elif square == bomb_square:  # тут Game Over Script
         alive = False
         print("You are dead...  Your score is", score)  # здесь выводит набранное кол-во очков
@@ -51,7 +58,7 @@ while alive:
         turtle.write("For some more information type 'info', if you want to leave type 'quit':", font=style, align="center")
         turtle.hideturtle()
         time.sleep(0.5)
-        user_prompt = input("If you want to see some more information type 'info' or if you want to leave type quit in chat: ")
+        user_prompt = input("If you want to see some more information type 'info' or if you want to leave type 'quit' in chat: ")
         if user_prompt == "info":
             turtle.clear()
             print(list(info.items()))  # вывожу и листую доп инфу       # спрашиваю если юзер хочет доп инфу или уйти ^
@@ -69,10 +76,10 @@ while alive:
             print("Unknown command been received: Closing program...")  # вывожу это если не info и не quit
             turtle.bgcolor("black")
             turtle.color("white")
-            style = ("Hellovetica", 55, "underline")
+            style = ("Hellovetica", 25, "underline")
             turtle.write("Unknown command been received: Closing program...", font=style, align="center")
-            turtle.hideturtle()
             time.sleep(0.5)
+            turtle.hideturtle()
     else:
         turtle.clear()
         print("No bomb here")  # вывожу это если не попался
