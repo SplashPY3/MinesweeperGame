@@ -5,7 +5,7 @@ import turtle
 username = input("Enter your username: ")  # здесь запрашиваю имя пользователя
 if username == "splash" or username == "Splash":  # если юзернэйм равен Splash выйдет сообщение приведенное снизу
     turtle.clear()
-    print("Welcome to SAPPER, my Lord! Love to see you here")
+    print("Welcome to Defuser, mr. Splash! Love to see you here!")
     turtle.bgcolor("black")
     turtle.color("white")
     style = ("FunGames", 25, "underline")
@@ -58,7 +58,7 @@ while alive:
         turtle.write("For some more information type 'info', if you want to leave type 'quit':", font=style, align="center")
         turtle.hideturtle()
         time.sleep(0.5)
-        user_prompt = input("If you want to see some more information type 'info' or if you want to leave type 'quit' in chat: ")
+        user_prompt = input("If you want to see some more information type 'info' or if you want to leave type 'quit': ")
         if user_prompt == "info":
             turtle.clear()
             print(list(info.items()))  # вывожу и листую доп инфу       # спрашиваю если юзер хочет доп инфу или уйти ^
