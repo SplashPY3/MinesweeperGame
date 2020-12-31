@@ -5,20 +5,20 @@ import turtle
 username = input("Enter your username: ")  # здесь запрашиваю имя пользователя
 if username == "splash" or username == "Splash":  # если юзернэйм равен Splash выйдет сообщение приведенное снизу
     turtle.clear()
-    print("Welcome to Defuser, mr. Splash! Love to see you here!")
+    print("Welcome to Minesweeper, mr. Splash! Love to see you here!")
     turtle.bgcolor("black")
     turtle.color("white")
     style = ("FunGames", 25, "underline")
-    turtle.write("Welcome to Defuser, mr. Splash! Love to see you here!", font=style, align="center")
+    turtle.write("Welcome to Minesweeper, mr. Splash! Love to see you here!", font=style, align="center")
     turtle.hideturtle()
     time.sleep(0.5)
 else:
     turtle.clear()
-    print(username, ",", "Welcome to DEFUSER on Python 3")  # тут юзернэйм не равен Splash
+    print(username, ",", "Welcome to Minesweeper on Python 3")  # тут юзернэйм не равен Splash
     turtle.bgcolor("black")
     turtle.color("white")
     style = ("FunGames", 25, "underline")
-    turtle.write("Welcome to DEFUSER on Python 3", font=style, align="center")
+    turtle.write("Welcome to Minesweeper on Python 3", font=style, align="center")
     turtle.hideturtle()
     time.sleep(1.5)
 score = 0  # переменная для зачисления очков
